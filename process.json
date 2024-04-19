@@ -1,0 +1,21 @@
+﻿{
+  "isBackup": false,
+  "userId": "shsh",
+  "organization": "",
+  "fileList": [
+    "GetData\\GetData.awx",
+    "SendMail\\SendMail.awx"
+  ],
+  "resource": {
+    "resourcePath": ".Resource",
+    "files": []
+  },
+  "libraryFileList": null,
+  "isUpload": false,
+  "type": "PROCESS",
+  "name": "Advanced_SendMail",
+  "id": "ocinvznu-peyt-himc-zbcz-fubjxtfrvycu",
+  "version": "0.01",
+  "comment": "",
+  "description": ""
+}

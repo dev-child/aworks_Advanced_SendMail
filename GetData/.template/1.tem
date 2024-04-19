@@ -1,0 +1,18 @@
+{
+    "ImageWidth": 1257,
+    "ImageHeight": 719,
+    "Rects": {
+        "8ea86205-ad11-4f6b-9d2f-94fc544a9981": {
+            "Top": 16,
+            "Left": 128,
+            "Width": 225,
+            "Height": 43,
+            "Conf": 28,
+            "Lang": "100",
+            "KeyID": "new region",
+            "Text": "ZR OIA EF I",
+            "GroundTruth": "",
+            "BlockType": 0
+        }
+    }
+}

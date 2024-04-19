@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Process>
+  <Version>3.2.0.0</Version>
+  <Description />
+  <Type>PROCESS</Type>
+  <Variables>
+    <Variable ID="86880a30-38fa-4612-bcc1-aefdf9b74bf9" Name="strarr_Attachments" Type="StringArray" Scope="Local" Range="Process" ErrorPropertyContent=""></Variable>
+  </Variables>
+  <InputOutputVariables>
+    <InputOutputVariable ID="cd2bed7d-34d8-4d76-bf0c-08536e65484f" Name="str_SenderID" Type="String" Scope="Input" Range="Process" Target="521e1742-8fb1-4783-a0bd-8b3a088fdf7c">"송신인 메일 주소 (gmail만 가능)"</InputOutputVariable>
+    <InputOutputVariable ID="0df8dd45-1a39-4e4d-8684-61ec38ab79e7" Name="str_SenderPW" Type="String" Scope="Input" Range="Process" Target="521e1742-8fb1-4783-a0bd-8b3a088fdf7c">"송신인 메일 비밀번호"</InputOutputVariable>
+    <InputOutputVariable ID="26e7c05d-96cf-441f-9e41-c8c12766b32e" Name="str_ReceiverID" Type="String" Scope="Input" Range="Process" Target="521e1742-8fb1-4783-a0bd-8b3a088fdf7c">"수신인 메일 주소 (보안 수준 낮춰야 가능)"</InputOutputVariable>
+    <InputOutputVariable ID="dd43eb7d-12ed-4ec9-88f9-99230e1281cc" Name="str_MailSubject" Type="String" Scope="Input" Range="Process" Target="521e1742-8fb1-4783-a0bd-8b3a088fdf7c">"메일 제목입니다."</InputOutputVariable>
+    <InputOutputVariable ID="0fe2020b-5de7-4c9d-8280-f89ecc954a7f" Name="str_MailBody" Type="String" Scope="Input" Range="Process" Target="521e1742-8fb1-4783-a0bd-8b3a088fdf7c">"메일 내용입니다."</InputOutputVariable>
+  </InputOutputVariables>
+  <List Key="" IsCollapsed="false">
+    <StartNodeID>Start</StartNodeID>
+    <Nodes>
+      <StartBlock ID="Start" Index="0" X="360" Y="100" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="">
+        <ClassExpression IsError="false">
+          <ClassDefinitions>
+            <ClassDefinition IsError="false">
+              <Name>MyCustomClass</Name>
+              <Variables />
+              <Functions>
+                <Function Name="CustomMethod" ReturnType="Void">
+                  <Arguments /></Function>
+                <Function Name="CustomMethod1" ReturnType="Void">
+                  <Arguments /></Function>
+              </Functions>
+            </ClassDefinition>
+            <ClassDefinition IsError="false">
+              <Name>MyCustomClass1</Name>
+              <Variables />
+              <Functions>
+                <Function Name="CustomMethod" ReturnType="Void">
+                  <Arguments /></Function>
+                <Function Name="CustomMethod1" ReturnType="Void">
+                  <Arguments /></Function>
+              </Functions>
+            </ClassDefinition>
+          </ClassDefinitions>
+        </ClassExpression>
+        <ProcessOutput>
+          <OutputVariables />
+        </ProcessOutput>
+      </StartBlock>
+      <WriteLog ID="68d57de7-314c-4129-9b3a-d5c84faebb8b" Index="1" X="360" Y="170" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="**Info**" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Message="&quot;SendMail Task의 Input 변수를 설정해주세요. 샘플 스크립트는 gmail 용으로 작성이 되었으며 gmail &gt; my account &gt; security 에서 보안 수준이 낮은 앱의 액세스 허용을 체크하셔야 동작합니다.&quot;" />
+      <Task ID="f42fed5e-993a-4734-bc15-85e12250432d" Index="2" X="360" Y="274" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" FileName="GetData.awx" RelativeFilePath="GetData\GetData.awx" IsShared="false" />
+      <Task ID="521e1742-8fb1-4783-a0bd-8b3a088fdf7c" Index="3" X="360" Y="360" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" FileName="SendMail.awx" RelativeFilePath="SendMail\SendMail.awx" IsShared="false" />
+      <Comment ID="1.데이터 수집" Index="1" X="328" Y="257" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" Width="317" Height="71" Name="데이터 수집" Description="A.WORSK 포탈에서 뉴스 데이터 수집하여 텍스트 파일로 저장" />
+    </Nodes>
+  </List>
+  <Links>
+    <Link Source="Start" Target="68d57de7-314c-4129-9b3a-d5c84faebb8b" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="68d57de7-314c-4129-9b3a-d5c84faebb8b" Target="f42fed5e-993a-4734-bc15-85e12250432d" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="f42fed5e-993a-4734-bc15-85e12250432d" Target="521e1742-8fb1-4783-a0bd-8b3a088fdf7c" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+  </Links>
+  <Comments />
+  <InvalidTaskList>
+    <InvalidTaskList>C:\Users\User\Documents\Aworks\RPAXmlData\Advanced_SendMail\GetData\GetData.awx</InvalidTaskList>
+  </InvalidTaskList>
+</Process>
